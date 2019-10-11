@@ -1,24 +1,16 @@
 import React from 'react'
-import { View, Text } from 'react-native'
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
-import HomeScreen from './screens/HomeScreen'
-
-const DetailsScreen = () => {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-    </View>
-  )
-}
+import SignIn from './screens/SignIn'
+import SignUp from './screens/SignUp'
 
 const RootStack = createStackNavigator(
   {
-    Home: HomeScreen,
-    Details: DetailsScreen
+    SignIn: SignIn,
+    SignUp: SignUp
   },
   {
-    initialRouteName: 'Home'
+    initialRouteName: 'SignIn'
   }
 )
 
